@@ -1,0 +1,14 @@
+Source:	radosgw-apache
+Maintainer: Sage Weil <sage@newdream.net>
+Uploaders: Sage Weil <sage@newdream.net>
+Section: admin
+Priority: optional
+Build-Depends: debhelper (>= 8), python-setuptools
+X-Python-Version: >= 2.4
+Standards-Version: 3.9.2
+Homepage: http://ceph.com/
+
+Package: radosgw-apache
+Architecture: all
+Depends: radosgw, apache2, libapache2-mod-fastcgi
+Description:  Rados gateway configuration for apache.
