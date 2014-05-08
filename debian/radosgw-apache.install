@@ -1,1 +1,1 @@
-rgw.conf etc/apache2/sites-enabled/rgw.conf
+rgw.conf etc/apache2/sites-available/rgw.conf

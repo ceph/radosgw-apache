@@ -11,7 +11,7 @@ unconfigure_radosgw_apache()
 case "$1" in
 	remove)
 		unconfigure_radosgw-apache
-		[ -x /sbin/stop ] && stop apache
+		/etc/init.d/apache2 stop
 		;;
 	upgrade|deconfigure)
 		:

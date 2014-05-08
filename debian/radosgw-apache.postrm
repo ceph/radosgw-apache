@@ -2,7 +2,7 @@
 
 case "$1" in
 	remove|purge|upgrade|disappear|failed-upgrade|abort-install|abort-upgrade)
-		invoke-rc.d apache restart
+		invoke-rc.d apache2 restart
 		;;
 	*)
 		echo "postrm called with unknown argument $1" >&2

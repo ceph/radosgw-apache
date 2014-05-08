@@ -31,14 +31,14 @@ Meta package for calamari-agent and calamari-restapi packages.
 echo "Build"
 
 %install
-install -m 0755 -D rgw.conf  $RPM_BUILD_ROOT/%{_sysconfdir}/apache/sites-enabled/rgw.conf
+install -m 0755 -D rgw.conf  $RPM_BUILD_ROOT/%{_sysconfdir}/apache/sites-available/rgw.conf
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%{_sysconfdir}/apache/sites-enabled/rgw.conf
+%{_sysconfdir}/apache/sites-available/rgw.conf
 
 %post
 echo "Post install"

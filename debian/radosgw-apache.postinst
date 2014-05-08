@@ -14,11 +14,12 @@ unconfigure_radosgw_apache()
 case "$1" in
 	configure)
 		setup_radosgw_apache
-		[ -x /sbin/start ] && (stop apache || true) && start apache
+		/etc/init.d/apache2 stop
+		/etc/init.d/apache2 start
 		;;
 	abort-upgrade|abort-remove|abort-deconfigure)
 		unconfigure_radosge_apache
-		[ -x /sbin/stop ] && (stop apache || true)
+		/etc/init.d/apache2 stop
 		:
 		;;
 	*)
