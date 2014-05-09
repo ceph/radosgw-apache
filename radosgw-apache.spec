@@ -17,7 +17,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 #  bring up radosgw.
 Requires:       librbd1 = %{version}-%{release}
 Requires:       librados1 = %{version}-%{release}
-Requires:	radosgw
+Requires:	ceph-radosgw
 Requires:	httpd
 Requires:	mod_fastcgi
 

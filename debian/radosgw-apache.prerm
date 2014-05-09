@@ -1,16 +1,11 @@
 #!/bin/bash -e
 
-unconfigure_radosgw_apache()
-{
-	[ -e /etc/radosgw-apache/radosgw-apache.conf ] && \
-		rm -f /etc/radosgw-apache/radosgw-apache.conf
-	[ -e /etc/default/radosgw-apache.orig ] && \
-		mv /etc/default/radosgw-apache.orig /etc/default/radosgw-apache
-}
-
 case "$1" in
 	remove)
-		unconfigure_radosgw-apache
+		[ -e /etc/radosgw-apache/radosgw-apache.conf ] && \
+			rm -f /etc/radosgw-apache/radosgw-apache.conf
+		[ -e /etc/default/radosgw-apache.orig ] && \
+			mv /etc/default/radosgw-apache.orig /etc/default/radosgw-apache
 		/etc/init.d/apache2 stop
 		;;
 	upgrade|deconfigure)

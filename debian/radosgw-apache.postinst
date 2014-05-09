@@ -1,24 +1,13 @@
 #!/bin/bash -e
 
-setup_radosgw_apache()
-{
-	echo "setup_rados_gw_apache"
-}
-
-unconfigure_radosgw_apache()
-{
-	echo "unconfigure_rados_gw_apache"
-}
-
-
 case "$1" in
 	configure)
-		setup_radosgw_apache
+		echo "setup_rados_gw_apache"
 		/etc/init.d/apache2 stop
 		/etc/init.d/apache2 start
 		;;
 	abort-upgrade|abort-remove|abort-deconfigure)
-		unconfigure_radosge_apache
+		echo "unconfigure_rados_gw_apache"
 		/etc/init.d/apache2 stop
 		:
 		;;
